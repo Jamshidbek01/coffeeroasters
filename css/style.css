@@ -452,6 +452,7 @@ ul {
     background: #293039;
     height: 480px;
     margin-bottom: 150px;
+    border-radius: 10px;
 }
 
 .quality-container {
