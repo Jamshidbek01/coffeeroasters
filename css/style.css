@@ -449,7 +449,7 @@ ul {
 
 .quality.wrap {
     max-width: 1260px;
-    background: url(../images/quality-bg.svg) 0 0/100% auto no-repeat;
+    background: #293039;
     height: 480px;
     margin-bottom: 150px;
 }
