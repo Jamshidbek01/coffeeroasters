@@ -40,7 +40,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* background-color: #f2f2f2; */
+    background-color: #f2f2f2;
 }
 
 main {
@@ -106,6 +106,7 @@ ul {
 .hero {
     background: url(../images/hero-bg.jpg) 0 0/100% auto no-repeat;
     margin-bottom: 150rem;
+    border-radius: 10px;
 }
 
 .hero.wrap {
@@ -288,7 +289,7 @@ ul {
     color: #FEFCF7;
 }
 
-.title {
+.last-section .title {
     margin-top: 300rem;
     font-family: 'Fraunces 9pt';
     font-style: normal;
@@ -296,7 +297,25 @@ ul {
     font-size: 24rem;
     line-height: 32rem;
     color: #83888F;
-    margin-bottom: 178rem;
+    margin-bottom: 80rem;
+}
+
+.shape {
+    margin-bottom: 80px;
+    height: 2px;
+    width: 850px;
+    background: #FDD6BA;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shape span {
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    background: #f2f2f2;
+    border: 2px solid #0E8784;
 }
 
 .last-section-card {
@@ -305,53 +324,6 @@ ul {
     gap: 95rem;
     justify-content: center;
     margin-bottom: 64rem;
-    position: relative;
-}
-
-.card-item-1:after {
-    content: '';
-    position: absolute;
-    width: 31rem;
-    height: 31rem;
-    border: 2rem solid #0E8784;
-    border-radius: 50%;
-    left: 0;
-    top: -67rem;
-    z-index: 99;
-}
-
-.card-item-2:after {
-    content: '';
-    position: absolute;
-    width: 31rem;
-    height: 31rem;
-    background-color: #fff;
-    z-index: 99;
-    border: 2rem solid #0E8784;
-    border-radius: 50%;
-    left: 412rem;
-    top: -67rem;
-}
-
-.card-item-3:after {
-    content: '';
-    position: absolute;
-    width: 31rem;
-    height: 31rem;
-    border: 2rem solid #0E8784;
-    border-radius: 50%;
-    left: 824rem;
-    top: -67rem;
-}
-
-.last-section-card-item .card-number::before {
-    content: '';
-    position: absolute;
-    width: 792rem;
-    height: 2rem;
-    background-color: #FDD6BA;
-    left: 32rem;
-    top: -51rem;
 }
 
 .last-section-card-item .card-number {
@@ -416,4 +388,157 @@ ul {
 
 .networks a:not(:last-child) {
     margin-right: 20rem;
+}
+
+.about-hero {
+    background: url(../images/hero-bg-about.jpg) 0 0/100% auto no-repeat;
+    margin-bottom: 150rem;
+}
+
+.about-hero.wrap {
+    max-width: 1260px;
+    border-radius: 10px;
+}
+
+.about-hero .hero-text {
+    margin-bottom: 12rem;
+}
+
+.about-hero-title {
+    font-family: 'Fraunces 9pt';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 72rem;
+    line-height: 72rem;
+    color: #FEFCF7;
+    font-size: 40px;
+    margin-bottom: 24px;
+}
+
+.commitment-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+.commitment-image {
+    margin-right: 125px;
+}
+
+.commitment-info .title {
+    font-family: 'Fraunces 9pt';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    color: #333D4B;
+    margin-bottom: 32px;
+}
+
+.commitment-info .text {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #333D4B;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    width: 540px;
+}
+
+.quality.wrap {
+    max-width: 1260px;
+    background: url(../images/quality-bg.svg) 0 0/100% auto no-repeat;
+    height: 480px;
+    margin-bottom: 150px;
+}
+
+.quality-container {
+    display: flex;
+    align-items: center;
+}
+
+.quality-image {
+    margin-top: -80px;
+}
+
+.quality-image img {
+    border-radius: 8px;
+}
+
+.quality-info {
+    margin-right: 125px;
+}
+
+.quality-info .title {
+    font-family: 'Fraunces 9pt';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    color: #FEFCF7;
+    margin-bottom: 32px;
+}
+
+.quality-info .text {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #FEFCF7;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    width: 540px;
+}
+
+.dealer-title {
+    font-family: 'Fraunces 9pt';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    color: #83888F;
+    margin-bottom: 60px;
+}
+
+.dealer-card {
+    display: flex;
+    gap: 150px;
+}
+
+.dealer-card-img {
+    margin-bottom: 40px;
+}
+
+.dealer-card-title {
+    font-family: 'Fraunces 9pt';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 36px;
+    color: #333D4B;
+    margin-bottom: 24px;
+}
+
+.dealer-card-text {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #333D4B;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+    .hero {
+        background: url(../images/hero-bg@2x.jpg) 0 0/100% auto no-repeat;
+    }
+
+    .about-hero {
+        background: url(../images/hero-bg-about@2x.jpg) 0 0/100% auto no-repeat;
+    }
 }
