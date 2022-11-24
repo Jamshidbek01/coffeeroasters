@@ -25,6 +25,25 @@
         url('../fonts/fraunces-v24-latin-900.woff') format('woff');
 }
 
+:root {
+    --font-barlow: 'Barlow', 'Gill Sans',
+        'Gill Sans MT',
+        Calibri,
+        'Trebuchet MS',
+        sans-serif;
+    --font-fraunces: 'Fraunces 9pt',
+        'Gill Sans',
+        'Gill Sans MT',
+        Calibri,
+        'Trebuchet MS',
+        sans-serif;
+    --text-color: #FEFCF7;
+    --title-color: #83888F;
+    --green: #0E8784;
+    --pale-yellow: #FDD6BA;
+    --bg-color: #293039;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -80,7 +99,6 @@ ul {
 .header-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .site-nav-list {
@@ -89,14 +107,14 @@ ul {
 }
 
 .nav-link {
-    font-family: 'Barlow';
+    font-family: var(--font-barlow);
     font-style: normal;
     font-weight: 700;
     font-size: 12rem;
     line-height: 15rem;
     letter-spacing: 0.923077rem;
     text-transform: uppercase;
-    color: #83888F;
+    color: var(--title-color);
     transition: all .3s ease-in-out;
 }
 
@@ -107,7 +125,7 @@ ul {
 .hero {
     background: url(../images/hero-bg.jpg) 0 0/100% auto no-repeat;
     margin-bottom: 150rem;
-    border-radius: 10px;
+    border-radius: 10rem;
 }
 
 .hero.wrap {
@@ -120,23 +138,23 @@ ul {
 }
 
 .hero-title {
-    font-family: 'Fraunces 9pt';
+    font-family: var(--font-fraunces);
     font-style: normal;
     font-weight: 900;
     font-size: 72rem;
     line-height: 72rem;
-    color: #FEFCF7;
+    color: var(--text-color);
     margin-bottom: 32rem;
     width: 493rem;
 }
 
 .hero-text {
-    font-family: 'Barlow';
+    font-family: var(--font-barlow);
     font-style: normal;
     font-weight: 400;
     font-size: 16rem;
     line-height: 26rem;
-    color: #FEFCF7;
+    color: var(--text-color);
     mix-blend-mode: normal;
     opacity: 0.8;
     margin-bottom: 56rem;
@@ -144,13 +162,13 @@ ul {
 }
 
 .btn {
-    font-family: 'Fraunces 9pt';
+    font-family: var(--font-fraunces);
     font-style: normal;
     font-weight: 900;
     font-size: 18rem;
     line-height: 25rem;
-    color: #FEFCF7;
-    background-color: #0E8784;
+    color: var(--text-color);
+    background-color: var(--green);
     border-radius: 6rem;
     padding: 15rem 30rem;
     transition: all .3s ease;
@@ -182,7 +200,7 @@ ul {
 }
 
 .collection-card-item .card-title {
-    font-family: 'Fraunces 9pt';
+    font-family: var(--font-fraunces);
     font-style: normal;
     font-weight: 900;
     font-size: 24rem;
@@ -193,7 +211,7 @@ ul {
 }
 
 .collection-card-item .card-text {
-    font-family: 'Barlow';
+    font-family: var(--font-barlow);
     font-style: normal;
     font-weight: 400;
     font-size: 16rem;
@@ -203,7 +221,7 @@ ul {
 }
 
 .service.wrap {
-    background-color: #293039;
+    background-color: var(--bg-color);
     max-width: 1260rem;
     height: 578rem;
     border-radius: 10rem;
@@ -222,24 +240,24 @@ ul {
 }
 
 .service-title {
-    font-family: 'Fraunces 9pt';
+    font-family: var(--font-fraunces);
     font-style: normal;
     font-weight: 900;
     font-size: 40rem;
     line-height: 48rem;
     text-align: center;
-    color: #FEFCF7;
+    color: var(--text-color);
     margin-bottom: 32rem;
 }
 
 .service-text {
-    font-family: 'Barlow';
+    font-family: var(--font-barlow);
     font-style: normal;
     font-weight: 400;
     font-size: 16rem;
     line-height: 26rem;
     text-align: center;
-    color: #FEFCF7;
+    color: var(--text-color);
     mix-blend-mode: normal;
     opacity: 0.8;
     width: 540rem;
@@ -254,7 +272,7 @@ ul {
 }
 
 .service-card-item {
-    background: #0E8784;
+    background: var(--green);
     border-radius: 8rem;
     width: 350rem;
     padding-top: 72rem;
@@ -270,53 +288,53 @@ ul {
 }
 
 .service-card-item .card-title {
-    font-family: 'Fraunces 9pt';
+    font-family: var(--font-fraunces);
     font-style: normal;
     font-weight: 900;
     font-size: 24rem;
     line-height: 32rem;
     text-align: center;
-    color: #FEFCF7;
+    color: var(--text-color);
     margin-bottom: 24rem;
 }
 
 .service-card-item .card-text {
-    font-family: 'Barlow';
+    font-family: var(--font-barlow);
     font-style: normal;
     font-weight: 400;
     font-size: 16rem;
     line-height: 26rem;
     text-align: center;
-    color: #FEFCF7;
+    color: var(--text-color);
 }
 
 .last-section .title {
     margin-top: 300rem;
-    font-family: 'Fraunces 9pt';
+    font-family: var(--font-fraunces);
     font-style: normal;
     font-weight: 900;
     font-size: 24rem;
     line-height: 32rem;
-    color: #83888F;
+    color: var(--title-color);
     margin-bottom: 80rem;
 }
 
 .shape {
-    margin-bottom: 80px;
-    height: 2px;
-    width: 850px;
-    background: #FDD6BA;
+    margin-bottom: 80rem;
+    height: 2rem;
+    width: 850rem;
+    background: var(--pale-yellow);
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .shape span {
-    width: 31px;
-    height: 31px;
+    width: 31rem;
+    height: 31rem;
     border-radius: 50%;
     background: #f2f2f2;
-    border: 2px solid #0E8784;
+    border: 2rem solid var(--green);
 }
 
 .last-section-card {
@@ -328,17 +346,17 @@ ul {
 }
 
 .last-section-card-item .card-number {
-    font-family: 'Fraunces 9pt';
+    font-family: var(--font-fraunces);
     font-style: normal;
     font-weight: 900;
     font-size: 72rem;
     line-height: 72rem;
-    color: #FDD6BA;
+    color: var(--pale-yellow);
     margin-bottom: 38rem;
 }
 
 .last-section-card-item .card-title {
-    font-family: 'Fraunces 9pt';
+    font-family: var(--font-fraunces);
     font-style: normal;
     font-weight: 900;
     font-size: 32rem;
@@ -349,7 +367,7 @@ ul {
 }
 
 .last-section-card-item .card-text {
-    font-family: 'Barlow';
+    font-family: var(--font-barlow);
     font-style: normal;
     font-weight: 400;
     font-size: 16rem;
@@ -384,7 +402,7 @@ ul {
 }
 
 .footer-container .nav-link:hover {
-    color: #FEFCF7;
+    color: var(--text-color);
 }
 
 .networks a:not(:last-child) {
@@ -397,8 +415,8 @@ ul {
 }
 
 .about-hero.wrap {
-    max-width: 1260px;
-    border-radius: 10px;
+    max-width: 1260rem;
+    border-radius: 10rem;
 }
 
 .about-hero .hero-text {
@@ -406,54 +424,53 @@ ul {
 }
 
 .about-hero-title {
-    font-family: 'Fraunces 9pt';
+    font-family: var(--font-fraunces);
     font-style: normal;
     font-weight: 900;
     font-size: 72rem;
     line-height: 72rem;
-    color: #FEFCF7;
-    font-size: 40px;
-    margin-bottom: 24px;
+    color: var(--text-color);
+    font-size: 40rem;
+    margin-bottom: 24rem;
 }
 
 .commitment-container {
     display: flex;
     align-items: center;
-    margin-bottom: 150px;
+    margin-bottom: 150rem;
 }
 
 .commitment-image {
-    margin-right: 125px;
+    margin-right: 125rem;
 }
 
 .commitment-info .title {
-    font-family: 'Fraunces 9pt';
+    font-family: var(--font-fraunces);
     font-style: normal;
     font-weight: 900;
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 40rem;
+    line-height: 48rem;
     color: #333D4B;
-    margin-bottom: 32px;
+    margin-bottom: 32rem;
 }
 
 .commitment-info .text {
-    font-family: 'Barlow';
+    font-family: var(--font-barlow);
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 16rem;
+    line-height: 26rem;
     color: #333D4B;
     mix-blend-mode: normal;
     opacity: 0.8;
-    width: 540px;
+    width: 540rem;
 }
 
 .quality.wrap {
-    max-width: 1260px;
-    background: #293039;
-    height: 480px;
-    margin-bottom: 150px;
-    border-radius: 10px;
+    max-width: 1260rem;
+    background: var(--bg-color);
+    height: 480rem;
+    margin-bottom: 150rem;
 }
 
 .quality-container {
@@ -462,75 +479,291 @@ ul {
 }
 
 .quality-image {
-    margin-top: -80px;
+    margin-top: -80rem;
 }
 
 .quality-image img {
-    border-radius: 8px;
+    border-radius: 8rem;
 }
 
 .quality-info {
-    margin-right: 125px;
+    margin-right: 125rem;
 }
 
 .quality-info .title {
-    font-family: 'Fraunces 9pt';
+    font-family: var(--font-fraunces);
     font-style: normal;
     font-weight: 900;
-    font-size: 40px;
-    line-height: 48px;
-    color: #FEFCF7;
-    margin-bottom: 32px;
+    font-size: 40rem;
+    line-height: 48rem;
+    color: var(--text-color);
+    margin-bottom: 32rem;
 }
 
 .quality-info .text {
-    font-family: 'Barlow';
+    font-family: var(--font-barlow);
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-    color: #FEFCF7;
+    font-size: 16rem;
+    line-height: 26rem;
+    color: var(--text-color);
     mix-blend-mode: normal;
     opacity: 0.8;
-    width: 540px;
+    width: 540rem;
 }
 
 .dealer-title {
-    font-family: 'Fraunces 9pt';
+    font-family: var(--font-fraunces);
     font-style: normal;
     font-weight: 900;
-    font-size: 24px;
-    line-height: 32px;
-    color: #83888F;
-    margin-bottom: 60px;
+    font-size: 24rem;
+    line-height: 32rem;
+    color: var(--title-color);
+    margin-bottom: 60rem;
 }
 
 .dealer-card {
     display: flex;
-    gap: 150px;
+    gap: 150rem;
 }
 
 .dealer-card-img {
-    margin-bottom: 40px;
+    margin-bottom: 40rem;
 }
 
 .dealer-card-title {
-    font-family: 'Fraunces 9pt';
+    font-family: var(--font-fraunces);
     font-style: normal;
     font-weight: 900;
-    font-size: 32px;
-    line-height: 36px;
+    font-size: 32rem;
+    line-height: 36rem;
     color: #333D4B;
-    margin-bottom: 24px;
+    margin-bottom: 24rem;
 }
 
 .dealer-card-text {
-    font-family: 'Barlow';
+    font-family: var(--font-barlow);
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 16rem;
+    line-height: 26rem;
     color: #333D4B;
+}
+
+.plan-hero {
+    margin-bottom: 150rem;
+}
+
+.plan-hero .wrap {
+    background: url(../images/plan-hero-bg.jpg) 0 0/100% auto no-repeat;
+    max-width: 1260rem;
+    border-radius: 10rem;
+
+}
+
+.plan-hero .hero-info {
+    padding-bottom: 90rem;
+}
+
+.second-section .wrap {
+    max-width: 1260rem;
+    background-color: var(--bg-color);
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 80rem;
+    padding-bottom: 80rem;
+    border-radius: 10rem;
+    margin-bottom: 150rem;
+}
+
+.second-section .shape span {
+    background: transparent;
+}
+
+.second-section-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(285rem, 1fr));
+    gap: 95rem;
+    justify-content: center;
+    margin-bottom: 50rem;
+}
+
+.second-section-card-item .card-number {
+    font-family: var(--font-fraunces);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 72rem;
+    line-height: 72rem;
+    color: var(--pale-yellow);
+    margin-bottom: 35rem;
+}
+
+.second-section-card-item .card-title {
+    font-family: var(--font-fraunces);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32rem;
+    line-height: 36rem;
+    color: var(--text-color);
+    margin-bottom: 40rem;
+    width: 255rem;
+}
+
+.second-section-card-item .card-text {
+    font-family: var(--font-barlow);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16rem;
+    line-height: 26rem;
+    color: var(--text-color);
+    width: 285rem;
+}
+
+.plans-container {
+    display: flex;
+    gap: 150rem;
+}
+
+.department {
+    padding-top: 24rem;
+    padding-bottom: 24rem;
+    border-bottom: 1rem solid var(--title-color);
+    display: flex;
+}
+
+.department p {
+    font-family: var(--font-fraunces);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24rem;
+    line-height: 32rem;
+    color: var(--title-color);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.department:first-child span {
+    color: var(--green);
+}
+
+.department p:hover {
+    color: #333D4B;
+}
+
+.department span {
+    margin-right: 20rem;
+    font-family: var(--font-fraunces);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24rem;
+    line-height: 32rem;
+    color: var(--title-color);
+}
+
+.active-department p {
+    color: #333D4B;
+}
+
+.department-name {
+    font-family: var(--font-fraunces);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40rem;
+    line-height: 48rem;
+    color: var(--title-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 730rem;
+    cursor: pointer;
+    margin-bottom: 56rem;
+}
+
+.plan-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(228rem, 1fr));
+    gap: 23rem;
+    margin-bottom: 88rem;
+}
+
+.plan-card {
+    width: 228rem;
+    height: 250rem;
+    background-color: #dbd8d8;
+    padding: 32rem 28rem 84rem 28rem;
+    transition: .5s;
+    border-radius: 8rem;
+    cursor: pointer;
+}
+
+.plan-card:hover {
+    background-color: var(--pale-yellow);
+}
+
+.plan-card-name {
+    font-family: var(--font-fraunces);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24rem;
+    line-height: 32rem;
+    color: #333D4B;
+    margin-bottom: 24rem;
+}
+
+.plan-card-text {
+    font-family: var(--font-barlow);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16rem;
+    line-height: 26rem;
+    color: #333D4B;
+}
+
+.active-card {
+    background-color: var(--green);
+}
+
+.active-card:hover {
+    background-color: var(--green);
+}
+
+.summary {
+    background-color: var(--bg-color);
+    width: 730rem;
+    height: 216rem;
+    padding: 31rem 64rem;
+    border-radius: 8rem;
+    margin-bottom: 60rem;
+}
+
+.summary-title {
+    font-family: var(--font-barlow);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16rem;
+    line-height: 26rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    margin-bottom: 8rem;
+}
+
+.summary-text {
+    font-family: var(--font-fraunces);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24rem;
+    line-height: 40rem;
+    color: #FFFFFF;
+}
+
+.summary-text span {
+    color: var(--green);
+}
+
+.plans .btn {
+    float: right;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2),
@@ -542,5 +775,9 @@ ul {
 
     .about-hero {
         background: url(../images/hero-bg-about@2x.jpg) 0 0/100% auto no-repeat;
+    }
+
+    .plan-hero {
+        background: url(../images/plan-hero-bg@2x.jpg) 0 0/100% auto no-repeat;
     }
 }
