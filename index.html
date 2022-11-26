@@ -12,7 +12,7 @@
 
 <body>
     <header class="header">
-        <div class="header-container wrap">
+        <div class="header-container container">
             <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="logo image"></a></div>
             <div class="site-nav">
                 <ul class="site-nav-list">
@@ -27,19 +27,27 @@
                     </li>
                 </ul>
             </div>
+            <div class="toggle-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
     <main class="main">
-        <section class="hero wrap">
+        <section class="hero">
             <div class="hero-container container">
-                <div class="hero-info">
-                    <div class="hero-title">Great coffee
-                        made simple.</div>
-                    <div class="hero-text">Start your mornings with the world’s best coffees. Try our expertly curated
-                        artisan coffees from our best roasters
-                        delivered directly to your door, at your schedule.</div>
+                <div class="hero-wrapper">
+                    <div class="hero-info">
+                        <div class="hero-title">Great coffee
+                            made simple.</div>
+                        <div class="hero-text">Start your mornings with the world’s best coffees. Try our expertly
+                            curated
+                            artisan coffees from our best roasters
+                            delivered directly to your door, at your schedule.</div>
 
-                    <a class="btn" href="#">Create your plan</a>
+                        <a class="btn" href="#">Create your plan</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -49,61 +57,76 @@
                     <div class="collection-card-item">
                         <img class="card-img" src="images/gran-espresso.png" alt="gran espresso"
                             srcset="images/gran-espresso.png 1x, images/gran-espresso@2x.png 2x">
-                        <div class="card-title">Gran Espresso</div>
-                        <div class="card-text">Light and flavorful blend with cocoa and black pepper for an intense
-                            experience</div>
+                        <div class="card-info">
+                            <div class="card-title">Gran Espresso</div>
+                            <div class="card-text">Light and flavorful blend with cocoa and black pepper for an intense
+                                experience</div>
+                        </div>
                     </div>
                     <div class="collection-card-item">
                         <img class="card-img" src="images/planalto.png" alt="gran espresso"
                             srcset="images/planalto.png 1x, images/planalto@2x.png 2x">
-                        <div class="card-title">Planalto</div>
-                        <div class="card-text">Brazilian dark roast with rich and velvety body, and hints of fruits and
-                            nuts</div>
+                        <div class="card-info">
+                            <div class="card-title">Planalto</div>
+                            <div class="card-text">Brazilian dark roast with rich and velvety body, and hints of fruits
+                                and
+                                nuts</div>
+                        </div>
                     </div>
                     <div class="collection-card-item">
                         <img class="card-img" src="images/piccollo.png" alt="gran espresso"
                             srcset="images/piccollo.png 1x, images/piccollo@2x.png 2x">
-                        <div class="card-title">Piccollo</div>
-                        <div class="card-text">Mild and smooth blend featuring notes of toasted almond and dried cherry
+                        <div class="card-info">
+                            <div class="card-title">Piccollo</div>
+                            <div class="card-text">Mild and smooth blend featuring notes of toasted almond and dried
+                                cherry
+                            </div>
                         </div>
                     </div>
                     <div class="collection-card-item">
                         <img class="card-img" src="images/danche.png" alt="gran espresso"
                             srcset="images/danche.png 1x, images/danche@2x.png 2x">
-                        <div class="card-title">Danche</div>
-                        <div class="card-text">Ethiopian hand-harvested blend densely packed with vibrant fruit notes
+                        <div class="card-info">
+                            <div class="card-title">Danche</div>
+                            <div class="card-text">Ethiopian hand-harvested blend densely packed with vibrant fruit
+                                notes
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="service wrap">
+        <section class="service">
             <div class="service-container container">
-                <div class="service-info">
-                    <div class="service-title">Why choose us?</div>
-                    <div class="service-text">A large part of our role is choosing which particular coffees will be
-                        featured
-                        in our range. This means working closely with the best coffee growers to give
-                        you a more impactful experience on every level.</div>
-                </div>
-                <div class="service-cards">
-                    <div class="service-card-item">
-                        <img src="images/coffe.svg" alt="coffe one" class="card-img">
-                        <div class="card-title">Best quality</div>
-                        <div class="card-text">Discover an endless variety of the world’s best artisan coffee from each
-                            of our roasters.</div>
+                <div class="service-wrapper">
+                    <div class="service-info">
+                        <div class="service-title">Why choose us?</div>
+                        <div class="service-text">A large part of our role is choosing which particular coffees will be
+                            featured
+                            in our range. This means working closely with the best coffee growers to give
+                            you a more impactful experience on every level.</div>
                     </div>
-                    <div class="service-card-item">
-                        <img src="images/benefit.svg" alt="Exclusive benefits" class="card-img">
-                        <div class="card-title">Exclusive benefits</div>
-                        <div class="card-text">Special offers and swag when you subscribe, including 30% off your first
-                            shipment.</div>
-                    </div>
-                    <div class="service-card-item">
-                        <img src="images/shipping.svg" alt="free shipping" class="card-img">
-                        <div class="card-title">Free shipping</div>
-                        <div class="card-text">We cover the cost and coffee is delivered fast. Peak freshness:
-                            guaranteed.</div>
+                    <div class="service-cards">
+                        <div class="service-card-item">
+                            <img src="images/coffe.svg" alt="coffe one" class="card-img">
+                            <div class="card-title">Best quality</div>
+                            <div class="card-text">Discover an endless variety of the world’s best artisan coffee from
+                                each
+                                of our roasters.</div>
+                        </div>
+                        <div class="service-card-item">
+                            <img src="images/benefit.svg" alt="Exclusive benefits" class="card-img">
+                            <div class="card-title">Exclusive benefits</div>
+                            <div class="card-text">Special offers and swag when you subscribe, including 30% off your
+                                first
+                                shipment.</div>
+                        </div>
+                        <div class="service-card-item">
+                            <img src="images/shipping.svg" alt="free shipping" class="card-img">
+                            <div class="card-title">Free shipping</div>
+                            <div class="card-text">We cover the cost and coffee is delivered fast. Peak freshness:
+                                guaranteed.</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -146,29 +169,33 @@
     </main>
     <footer class="footer">
         <div class="footer-container container">
-            <div class="nav-logo">
-                <div class="logo"><a href="#" class="logo-link"><img src="images/logo-white.svg" alt="logo"></a></div>
-                <div class="site-nav">
-                    <ul class="site-nav-list">
-                        <li class="nav-list-item">
-                            <a class="nav-link" href="index.html">HOME</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <a class="nav-link" href="about.html">ABOUT US</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <a class="nav-link" href="plan.html">Create your plan</a>
-                        </li>
-                    </ul>
+            <div class="footer-wrapper">
+                <div class="nav-logo">
+                    <div class="logo"><a href="#" class="logo-link"><img src="images/logo-white.svg" alt="logo"></a>
+                    </div>
+                    <div class="site-nav">
+                        <ul class="site-nav-list">
+                            <li class="nav-list-item">
+                                <a class="nav-link" href="index.html">HOME</a>
+                            </li>
+                            <li class="nav-list-item">
+                                <a class="nav-link" href="about.html">ABOUT US</a>
+                            </li>
+                            <li class="nav-list-item">
+                                <a class="nav-link" href="plan.html">Create your plan</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="networks">
-                <a href="#"><img src="images/facebook.svg" alt="facebook icon"></a>
-                <a href="#"><img src="images/twitter.svg" alt="twitter icon"></a>
-                <a href="#"><img src="images/instagram.svg" alt="instagram icon"></a>
+                <div class="networks">
+                    <a href="#"><img src="images/facebook.svg" alt="facebook icon"></a>
+                    <a href="#"><img src="images/twitter.svg" alt="twitter icon"></a>
+                    <a href="#"><img src="images/instagram.svg" alt="instagram icon"></a>
+                </div>
             </div>
         </div>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
