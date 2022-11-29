@@ -1,0 +1,1249 @@
+@import 'other';
+@import 'mixins';
+
+.container {
+    max-width: 1320rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30rem;
+    padding-right: 30rem;
+
+    @include responsive(phone) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.site-nav-list {
+    display: flex;
+    gap: 30rem;
+}
+
+.nav-link {
+    font-family: var(--font-barlow);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12rem;
+    line-height: 15rem;
+    letter-spacing: 0.923077rem;
+    text-transform: uppercase;
+    color: var(--title-color);
+    transition: all .3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #333D4B;
+}
+
+.hero-wrapper {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 116rem 85rem;
+    border-radius: 10rem;
+
+    @include responsive(m-table) {
+        padding: 80px 50px;
+    }
+
+    @include responsive(phone) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.hero-info {
+    width: 100%;
+
+    @include responsive(phone) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.hero-title {
+    font-family: var(--font-fraunces);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 72rem;
+    line-height: 72rem;
+    color: var(--text-color);
+    margin-bottom: 32rem;
+    width: 493px;
+
+    @include responsive(m-table) {
+        font-size: 48px;
+        line-height: 48px;
+        width: 400px;
+    }
+
+    @include responsive(phone) {
+        font-size: 40px;
+        text-align: center;
+        width: 300px;
+    }
+
+    @include responsive(min-phone) {
+        width: 100%;
+        font-size: 30px;
+    }
+}
+
+.hero-text {
+    font-family: var(--font-barlow);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16rem;
+    line-height: 26rem;
+    color: var(--text-color);
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    margin-bottom: 56rem;
+    width: 445rem;
+
+    @include responsive(m-table) {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    @include responsive(phone) {
+        font-size: 15px;
+        width: 300px;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 30px;
+        padding: 0;
+        justify-content: center;
+    }
+
+    @include responsive(min-phone) {
+        width: 100%;
+        font-size: 13px;
+    }
+}
+
+.btn {
+    font-family: var(--font-fraunces);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18rem;
+    line-height: 25rem;
+    color: var(--text-color);
+    background-color: var(--green);
+    border-radius: 6rem;
+    padding: 15rem 30rem;
+    transition: all .3s ease;
+
+    &:hover {
+        background: #66D2CF;
+    }
+}
+
+.shape {
+    margin-bottom: 80rem;
+    height: 2rem;
+    width: 74.5%;
+    background: var(--pale-yellow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include responsive(phone) {
+        display: none;
+    }
+}
+
+.shape span {
+    width: 31rem;
+    height: 31rem;
+    border-radius: 50%;
+    background: #f2f2f2;
+    border: 2rem solid var(--green);
+}
+
+.header {
+    padding-top: 40rem;
+    padding-bottom: 40rem;
+
+    @include responsive(m-phone) {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .site-nav {
+        @include responsive(phone) {
+            display: none;
+            opacity: 0;
+        }
+    }
+
+    .site-nav.active {
+        @include responsive(phone) {
+            position: fixed;
+            display: block;
+            background: linear-gradient(0deg, rgba(254, 252, 247, 0.504981) 0%, #FEFCF7 25.94%);
+            height: 100vh;
+            width: 100%;
+            opacity: 1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    .site-nav-list {
+        @include responsive(phone) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 150px;
+        }
+    }
+
+    .nav-link {
+        @include responsive(phone) {
+            font-family: 'Fraunces 9pt';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 24px;
+            line-height: 32px;
+            text-align: center;
+            color: #333D4B;
+            margin-bottom: 32px;
+        }
+    }
+
+    .site-nav.active {
+        position: fixed;
+        display: block;
+        background: linear-gradient(0deg, rgba(254, 252, 247, 0.504981) 0%, #FEFCF7 25.94%);
+        height: 100vh;
+        width: 100%;
+        opacity: 1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .toggle-btn {
+        position: fixed;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        justify-content: space-between;
+        align-items: stretch;
+        display: none;
+        z-index: 99999;
+        top: 40px;
+        right: 40px;
+
+
+        @include responsive(phone) {
+            display: block;
+        }
+
+        @include responsive(m-phone) {
+            right: 20px;
+            top: 30px;
+        }
+    }
+
+    .toggle-btn span {
+        display: block;
+        height: 4px;
+        width: 30px;
+        background: #333D4B;
+        border-radius: 10rem;
+        transition: .3s ease-in;
+        margin-bottom: 6px;
+        opacity: 1;
+    }
+
+    .toggle-btn.open span:nth-child(2) {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+
+    .toggle-btn.open span:nth-child(3) {
+        transform: rotate(45deg) translateY(-14px);
+    }
+
+    .toggle-btn.open span:nth-child(1) {
+        transform: rotate(-45deg) translateY(14px);
+    }
+}
+
+.main-hero {
+    margin-bottom: 150rem;
+
+    .hero-wrapper {
+        background-image: url(../images/hero-bg.jpg);
+    }
+}
+
+.collection {
+    margin-bottom: 180rem;
+
+    .collection-container {
+        background: url(../images/collection-bg.svg) top center no-repeat;
+        padding-top: 120rem;
+
+        @include responsive(table) {
+            background: none;
+        }
+
+        .collection-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(255rem, 1fr));
+            gap: 30rem;
+            justify-content: center;
+            align-items: center;
+
+            @include responsive(m-table) {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .card-info {
+                @include responsive(m-table) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                }
+
+                @include responsive(phone) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+
+            .collection-card-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                @include responsive(m-table) {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                @include responsive(phone) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+
+            .card-img {
+                margin-bottom: 70rem;
+
+                @include responsive(m-table) {
+                    margin-bottom: 0;
+                    grid-area: 1/1/1/2;
+                }
+            }
+
+            .card-title {
+                font-family: var(--font-fraunces);
+                font-style: normal;
+                font-weight: 900;
+                font-size: 24rem;
+                line-height: 32rem;
+                text-align: center;
+                color: #333D4B;
+                margin-bottom: 24rem;
+            }
+
+            .card-text {
+                font-family: var(--font-barlow);
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16rem;
+                line-height: 26rem;
+                text-align: center;
+                color: #333D4B;
+
+                @include responsive(m-table) {
+                    text-align: left;
+                    width: 282px;
+                }
+            }
+        }
+    }
+}
+
+.service-container {
+    display: flex;
+    flex-direction: column;
+
+    .service-wrapper {
+        background-color: var(--bg-color);
+        width: 100%;
+        height: 578rem;
+        border-radius: 10rem;
+        padding-top: 100px;
+        padding-left: 85px;
+        padding-right: 85px;
+
+        @include responsive(desktop) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .service-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .service-title {
+                font-family: var(--font-fraunces);
+                font-style: normal;
+                font-weight: 900;
+                font-size: 40rem;
+                line-height: 48rem;
+                text-align: center;
+                color: var(--text-color);
+                margin-bottom: 32rem;
+
+                @include responsive(m-table) {
+                    font-size: 32px;
+                }
+
+                @include responsive(m-phone) {
+                    font-size: 28px;
+                }
+            }
+
+            .service-text {
+                font-family: var(--font-barlow);
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16rem;
+                line-height: 26rem;
+                text-align: center;
+                color: var(--text-color);
+                mix-blend-mode: normal;
+                opacity: 0.8;
+                width: 540rem;
+                margin-bottom: 86rem;
+
+                @include responsive(phone) {
+                    width: 100%;
+                }
+            }
+        }
+
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300rem, 1fr));
+            gap: 30rem;
+            justify-content: center;
+
+            @include responsive(desktop) {
+                gap: 15px;
+            }
+
+            @include responsive(m-table) {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .service-card-item {
+                background: var(--green);
+                border-radius: 8rem;
+                width: 350rem;
+                padding-top: 72rem;
+                padding-bottom: 48rem;
+                padding-left: 10px;
+                padding-right: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                @include responsive(desktop) {
+                    width: 100%;
+                }
+
+                @include responsive(m-table) {
+                    width: 100%;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+
+                .card-img {
+                    margin-bottom: 56rem;
+                }
+
+                .card-title {
+                    font-family: var(--font-fraunces);
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 24rem;
+                    line-height: 32rem;
+                    text-align: center;
+                    color: var(--text-color);
+                    margin-bottom: 24rem;
+                }
+
+                .card-text {
+                    font-family: var(--font-barlow);
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16rem;
+                    line-height: 26rem;
+                    text-align: center;
+                    color: var(--text-color);
+                }
+            }
+        }
+    }
+}
+
+
+
+.last-section {
+    margin-top: 300px;
+
+    @include responsive(table) {
+        margin-top: 600px;
+    }
+
+    @include responsive(m-table) {
+        margin-top: 1000px;
+    }
+
+    @include responsive(m-phone) {
+        margin-top: 1200px;
+    }
+
+    @include responsive(min-phone) {
+        margin-top: 1400px;
+    }
+
+    .last-section-container {
+        @include responsive(m-phone) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    .title {
+        font-family: var(--font-fraunces);
+        font-style: normal;
+        font-weight: 900;
+        font-size: 24rem;
+        line-height: 32rem;
+        color: var(--title-color);
+        margin-bottom: 80rem;
+    }
+
+    .last-section-card {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210rem, 1fr));
+        gap: 95rem;
+        justify-content: center;
+        margin-bottom: 64rem;
+
+        @include responsive(table) {
+            gap: 50px;
+        }
+
+        @include responsive(m-table) {
+            gap: 10px;
+        }
+
+        .last-section-card-item {
+            width: 285px;
+
+            @include responsive(table) {
+                width: 210px;
+            }
+
+            .card-number {
+                font-family: var(--font-fraunces);
+                font-style: normal;
+                font-weight: 900;
+                font-size: 72rem;
+                line-height: 72rem;
+                color: var(--pale-yellow);
+                margin-bottom: 38rem;
+            }
+
+            .card-title {
+                font-family: var(--font-fraunces);
+                font-style: normal;
+                font-weight: 900;
+                font-size: 32rem;
+                line-height: 36rem;
+                color: #333D4B;
+                margin-bottom: 42rem;
+            }
+
+            .card-text {
+                font-family: var(--font-barlow);
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16rem;
+                line-height: 26rem;
+                color: #333D4B;
+            }
+        }
+    }
+}
+
+.footer {
+    margin-top: 216rem;
+
+    @include responsive(phone) {
+        margin-top: 100px;
+    }
+
+    .footer-wrapper {
+        background-color: #2C343E;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 48px 85px;
+
+        @include responsive(table) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .site-nav-list {
+            @include responsive(phone) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+
+            @include responsive(table) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 50px;
+            }
+
+            .logo {
+                margin-right: 100rem;
+
+                @include responsive(table) {
+                    margin: 0;
+                }
+            }
+
+            .nav-link:hover {
+                color: var(--text-color);
+            }
+        }
+
+        .networks a:not(:last-child) {
+            margin-right: 20rem;
+        }
+    }
+}
+
+.about-hero {
+    border-radius: 10rem;
+
+    .hero-wrapper {
+        background-image: url(../images/hero-bg-about.jpg);
+        margin-bottom: 150rem;
+
+        .hero-text {
+            margin-bottom: 12rem;
+        }
+
+        .about-hero-title {
+            font-family: var(--font-fraunces);
+            font-style: normal;
+            font-weight: 900;
+            font-size: 72rem;
+            line-height: 72rem;
+            color: var(--text-color);
+            font-size: 40rem;
+            margin-bottom: 24rem;
+        }
+    }
+}
+
+.commitment-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 250rem;
+
+    @include responsive(m-table) {
+        flex-direction: column;
+    }
+
+    .commitment-image {
+        margin-right: 125rem;
+
+
+        @include responsive(desktop) {
+            margin-right: 50px;
+        }
+
+        @include responsive(phone) {
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+
+        img {
+            @include responsive(desktop) {
+                height: 400rem;
+                display: block;
+                object-fit: cover;
+                text-align: center;
+            }
+        }
+    }
+
+    .commitment-info {
+        .title {
+            font-family: var(--font-fraunces);
+            font-style: normal;
+            font-weight: 900;
+            font-size: 40rem;
+            line-height: 48rem;
+            color: #333D4B;
+            margin-bottom: 32rem;
+
+            @include responsive(desktop) {
+                font-size: 32px;
+            }
+
+            @include responsive(phone) {
+                text-align: center;
+            }
+        }
+
+        .text {
+            font-family: var(--font-barlow);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16rem;
+            line-height: 26rem;
+            color: #333D4B;
+            mix-blend-mode: normal;
+            opacity: 0.8;
+            width: 540rem;
+
+            @include responsive(desktop) {
+                width: 340px;
+            }
+
+            @include responsive(phone) {
+                width: 100%;
+                text-align: center;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+}
+
+.quality-container {
+    margin-bottom: 150rem;
+
+    .quality-wrapper {
+        background: var(--bg-color);
+        height: 480rem;
+        display: flex;
+        align-items: center;
+        padding: 100px 85px;
+        border-radius: 10px;
+        justify-content: center;
+
+        @include responsive(desktop) {
+            padding-top: 400px;
+        }
+
+        @include responsive(desktop) {
+            flex-direction: column;
+        }
+
+        .quality-image-two {
+            display: none;
+
+            @include responsive(desktop) {
+                display: block;
+                margin-top: -550px;
+                margin-bottom: 60px;
+            }
+
+            @include responsive(phone) {
+                display: block;
+                margin-top: -400px;
+                margin-bottom: 20px;
+            }
+
+            img {
+                border-radius: 10px;
+                width: 100%;
+
+                @include responsive(phone) {
+                    width: 300px;
+                }
+
+                @include responsive(m-phone) {
+                    width: 280px;
+                }
+            }
+        }
+
+        .quality-image {
+            margin-top: -80rem;
+
+            @include responsive(desktop) {
+                display: none;
+            }
+
+            img {
+                border-radius: 8rem;
+            }
+        }
+
+        .quality-info {
+            margin-right: 125rem;
+
+            @include responsive(desktop) {
+                margin-right: 0;
+            }
+
+            .title {
+                font-family: var(--font-fraunces);
+                font-style: normal;
+                font-weight: 900;
+                font-size: 40rem;
+                line-height: 48rem;
+                color: var(--text-color);
+                margin-bottom: 32rem;
+
+                @include responsive(m-table) {
+                    font-size: 38px;
+                }
+
+                @include responsive(phone) {
+                    font-size: 32px;
+                    text-align: center;
+                }
+            }
+
+            .text {
+                font-family: var(--font-barlow);
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16rem;
+                line-height: 26rem;
+                color: var(--text-color);
+                mix-blend-mode: normal;
+                opacity: 0.8;
+                width: 540rem;
+
+                @include responsive(m-table) {
+                    width: auto;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.dealer {
+
+    .dealer-title {
+        font-family: var(--font-fraunces);
+        font-style: normal;
+        font-weight: 900;
+        font-size: 24rem;
+        line-height: 32rem;
+        color: var(--title-color);
+        margin-bottom: 60rem;
+    }
+
+    .dealer-card {
+        display: flex;
+        gap: 150rem;
+
+        @include responsive(desktop) {
+            gap: 70px;
+        }
+
+        @include responsive(m-table) {
+            gap: 40px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dealer-card-item {
+            @include responsive(m-table) {
+                width: 250px;
+            }
+
+            @include responsive(phone) {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .dealer-card-img {
+            margin-bottom: 40rem;
+        }
+
+        .dealer-card-title {
+            font-family: var(--font-fraunces);
+            font-style: normal;
+            font-weight: 900;
+            font-size: 32rem;
+            line-height: 36rem;
+            color: #333D4B;
+            margin-bottom: 24rem;
+        }
+
+        .dealer-card-text {
+            font-family: var(--font-barlow);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16rem;
+            line-height: 26rem;
+            color: #333D4B;
+        }
+    }
+}
+
+.plan-hero {
+    margin-bottom: 150rem;
+
+    .hero-wrapper {
+        background-image: url(../images/plan-hero-bg.jpg);
+        border-radius: 10rem;
+    }
+}
+
+
+.second-section {
+    .container {
+        @include responsive(table) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .hero-wrapper {
+        background-color: var(--bg-color);
+        border-radius: 10rem;
+        margin-bottom: 150rem;
+
+        @include responsive(table) {
+            padding: 70px 40px;
+        }
+
+        .shape {
+            // @include responsive(desktop) {
+            //     gap: 70px;
+            // }
+        }
+
+        .shape span {
+            background: transparent;
+        }
+
+        .second-section-card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(205rem, 1fr));
+            gap: 95rem;
+            justify-content: center;
+            margin-bottom: 50rem;
+
+            @include responsive(table) {
+                gap: 20px;
+            }
+
+            .second-section-card-item {
+                @include responsive(phone) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .card-number {
+                    font-family: var(--font-fraunces);
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 72rem;
+                    line-height: 72rem;
+                    color: var(--pale-yellow);
+                    margin-bottom: 35rem;
+                }
+
+                .card-title {
+                    font-family: var(--font-fraunces);
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 32rem;
+                    line-height: 36rem;
+                    color: var(--text-color);
+                    margin-bottom: 40rem;
+                    width: 255rem;
+
+                    @include responsive(phone) {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+
+                .card-text {
+                    font-family: var(--font-barlow);
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16rem;
+                    line-height: 26rem;
+                    color: var(--text-color);
+                    width: 285rem;
+
+                    @include responsive(table) {
+                        width: 100%;
+                    }
+
+                    @include responsive(phone) {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.plans-container {
+    display: flex;
+    gap: 150rem;
+
+    @include responsive(desktop) {
+        gap: 70px;
+    }
+
+    .left {
+        @include responsive(table) {
+            display: none;
+        }
+    }
+
+    .department {
+        padding-top: 24rem;
+        padding-bottom: 24rem;
+        border-bottom: 1rem solid var(--title-color);
+        display: flex;
+
+        p {
+            font-family: var(--font-fraunces);
+            font-style: normal;
+            font-weight: 900;
+            font-size: 24rem;
+            line-height: 32rem;
+            color: var(--title-color);
+            cursor: pointer;
+            transition: all .3s ease;
+
+            &:hover {
+                color: #333D4B;
+            }
+        }
+
+        span {
+            margin-right: 20rem;
+            font-family: var(--font-fraunces);
+            font-style: normal;
+            font-weight: 900;
+            font-size: 24rem;
+            line-height: 32rem;
+            color: var(--title-color);
+        }
+    }
+
+    .department:first-child span {
+        color: var(--green);
+    }
+
+    .active-department p {
+        color: #333D4B;
+    }
+
+    .right {
+        .department-name {
+            font-family: var(--font-fraunces);
+            font-style: normal;
+            font-weight: 900;
+            font-size: 40rem;
+            line-height: 35rem;
+            color: var(--title-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 730rem;
+            cursor: pointer;
+            margin-bottom: 56rem;
+
+            @include responsive(m-table) {
+                width: 100%;
+                font-size: 32px;
+            }
+
+            @include responsive(m-phone) {
+                width: 100%;
+                font-size: 24px;
+            }
+        }
+
+        .plan-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200rem, 1fr));
+            gap: 23rem;
+            margin-bottom: 88rem;
+
+            @include responsive(m-table) {
+                gap: 15px;
+                margin-bottom: 50px;
+            }
+
+            .plan-card {
+                width: 228rem;
+                height: 250rem;
+                background-color: #dbd8d8;
+                padding: 32rem 28rem 84rem 28rem;
+                transition: .5s;
+                border-radius: 8rem;
+                cursor: pointer;
+
+                @include responsive(m-table) {
+                    width: 200px;
+                    height: 220px;
+                }
+
+                @include responsive(m-phone) {
+                    width: 100%;
+                    height: 200px;
+                }
+
+                &:hover {
+                    background-color: var(--pale-yellow);
+                }
+            }
+
+            .plan-card-name {
+                font-family: var(--font-fraunces);
+                font-style: normal;
+                font-weight: 900;
+                font-size: 24rem;
+                line-height: 32rem;
+                color: #333D4B;
+                margin-bottom: 24rem;
+            }
+
+            .plan-card-text {
+                font-family: var(--font-barlow);
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16rem;
+                line-height: 26rem;
+                color: #333D4B;
+            }
+
+            .active-card {
+                background-color: var(--green);
+            }
+
+            .active-card:hover {
+                background-color: var(--green);
+            }
+        }
+
+        .summary {
+            background-color: var(--bg-color);
+            width: 730rem;
+            height: 216rem;
+            padding: 31rem 64rem;
+            border-radius: 8rem;
+            margin-bottom: 60rem;
+
+            @include responsive(m-table) {
+                width: 100%;
+            }
+
+            @include responsive(phone) {
+                height: 260px;
+                padding: 20px;
+            }
+        }
+
+        .summary-title {
+            font-family: var(--font-barlow);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16rem;
+            line-height: 26rem;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            mix-blend-mode: normal;
+            opacity: 0.5;
+            margin-bottom: 8rem;
+        }
+
+        .summary-text {
+            font-family: var(--font-fraunces);
+            font-style: normal;
+            font-weight: 900;
+            font-size: 24rem;
+            line-height: 40rem;
+            color: #FFFFFF;
+
+            @include responsive(phone) {
+                font-size: 20px;
+            }
+        }
+
+        .summary-text span {
+            color: var(--green);
+        }
+
+        .btn {
+            float: right;
+        }
+    }
+}
