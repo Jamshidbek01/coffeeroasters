@@ -75,14 +75,14 @@ ul {
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 192dpi) {
-  .hero {
-    background: url(../images/hero-bg@2x.jpg) 0 0/100% auto no-repeat;
+  .main-hero .hero-wrapper {
+    background-image: url(../images/hero-bg@2x.jpg);
   }
-  .about-hero {
-    background: url(../images/hero-bg-about@2x.jpg) 0 0/100% auto no-repeat;
+  .about-hero .hero-wrapper {
+    background-image: url(../images/hero-bg-about@2x.jpg);
   }
-  .plan-hero {
-    background: url(../images/plan-hero-bg@2x.jpg) 0 0/100% auto no-repeat;
+  .plan-hero .hero-wrapper {
+    background-image: url(../images/plan-hero-bg@2x.jpg);
   }
 }
 .container {
